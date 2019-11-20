@@ -1,6 +1,6 @@
 const request = require('request')
 
-const getWeatherDetails = (address, callback) => {
+const geoCode = (address, callback) => {
     const encodedURIAddress = encodeURIComponent(address)
     const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodedURIAddress}.json?access_token=pk.eyJ1IjoicmFqYXRwYW5kZXkwMCIsImEiOiI4OWQzNmFjYzUyMDRlNTY1ZTIzMzYyOTFlZWIzNDc5MiJ9.wazERnOVDysZOR77Tey2cw`
     request({ url , json : true }, (error, response) => {
@@ -13,9 +13,9 @@ const getWeatherDetails = (address, callback) => {
            const data = {
              latitude, longitude
            }
-           callback(data)
+           callback(null, data)
          }
       }
     })
   }
-  module.exports = getWeatherDetails
+  module.exports = geoCode
