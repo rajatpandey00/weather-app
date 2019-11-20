@@ -1,0 +1,22 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Weather Application",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajatpandey00/node-tutorials.git"
+  },
+  "author": "RAJAT PANDEY",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajatpandey00/node-tutorials/issues"
+  },
+  "homepage": "https://github.com/rajatpandey00/node-tutorials#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
